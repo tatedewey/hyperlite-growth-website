@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Takeout Creative</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+
+    
+
+    <style>
+
+        :root {
+
+            --main-red: #D90000; /* classic chinese takeout red */
+
+            --bg-color: #fff;
+
+        }
+
+
+
+        body {
+
+            background-color: var(--bg-color);
+
+            color: var(--main-red);
+
+            font-family: 'Helvetica', 'Arial', sans-serif;
+
+            margin: 0;
+
+            padding: 20px;
+
+            display: flex;
+
+            justify-content: center;
+
+        }
+
+
+
+        .menu-container {
+
+            width: 100%;
+
+            max-width: 600px;
+
+            text-align: center;
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+        }
+
+
+
+        /* Arched Title Styling */
+
+        .arched-title {
+
+            width: 100%;
+
+            max-width: 100%;
+
+            height: 160px;
+
+            margin-bottom: -20px;
+
+            overflow: visible;
+
+        }
+
+        
+
+        .arched-title text {
+
+            fill: var(--main-red);
+
+            font-family: 'Cinzel', serif; /* Sharp serif font */
+
+            font-weight: bold;
+
+            font-size: 48px;
+
+            text-anchor: middle;
+
+            letter-spacing: 1.5px;
+
+        }
+
+
+
+        /* Sub-headers */
+
+        .sub-header {
+
+            font-family: 'Arial', sans-serif;
+
+            font-weight: bold;
+
+            font-size: 22px;
+
+            margin-top: 0px;
+
+            margin-bottom: 10px;
+
+        }
+
+
+
+        .chinese-main-title {
+
+            font-family: 'Ma Shan Zheng', cursive; /* Brush style chinese font */
+
+            font-size: 60px;
+
+            margin: 10px 0;
+
+            line-height: 1;
+
+        }
+
+
+
+        /* Middle Section: Dragon + Vertical Text */
+
+        .middle-section {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            width: 100%;
+
+            margin: 20px 0;
+
+        }
+
+
+
+        .side-text {
+
+            font-family: 'Noto Serif SC', serif;
+
+            font-size: 28px;
+
+            writing-mode: vertical-rl; /* Makes text vertical */
+
+            text-orientation: upright;
+
+            letter-spacing: 10px;
+
+            font-weight: bold;
+
+            width: 50px;
+
+        }
+
+
+
+        .dragon-image {
+
+            width: 300px;
+
+            height: auto;
+
+            /* Using a filter to turn a black image red if needed, 
+
+               but assuming source is red or we use CSS to colorize a mask */
+
+            filter: drop-shadow(0px 0px 0px var(--main-red)); 
+
+        }
+
+
+
+        /* Boxed Banner */
+
+        .serving-banner {
+
+            border: 2px solid var(--main-red);
+
+            padding: 5px 20px;
+
+            font-family: 'Playfair Display', serif;
+
+            font-style: italic;
+
+            font-weight: 700;
+
+            font-size: 24px;
+
+            margin: 20px 0 10px 0;
+
+            width: 90%;
+
+            box-sizing: border-box;
+
+        }
+
+
+
+        /* Menu Text */
+
+        .carry-out {
+
+            font-family: 'Arial', sans-serif;
+
+            font-weight: 900;
+
+            font-size: 32px;
+
+            text-transform: uppercase;
+
+            margin: 10px 0;
+
+        }
+
+        
+
+        .carry-out a {
+
+            color: var(--main-red);
+
+            text-decoration: none;
+
+        }
+
+        
+
+        .carry-out a:hover {
+
+            color: #00ff00;
+
+            text-decoration: underline;
+
+        }
+
+
+
+        .save-time {
+
+            font-family: 'Playfair Display', serif;
+
+            font-weight: 700;
+
+            font-size: 18px;
+
+            margin-bottom: 5px;
+
+        }
+
+
+
+        .phone-number {
+
+            font-family: 'Arial', sans-serif;
+
+            font-weight: bold;
+
+            font-size: 24px;
+
+            margin-bottom: 20px;
+
+        }
+
+
+
+        /* Services / Hours Section */
+
+        .specials-header {
+
+            font-weight: 900;
+
+            font-size: 18px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 10px;
+
+        }
+
+
+
+        .services-list {
+
+            list-style: none;
+
+            padding: 0;
+
+            margin: 0;
+
+        }
+
+
+
+        .service-item {
+
+            font-family: 'Arial', sans-serif;
+
+            font-weight: 900;
+
+            font-size: 20px; /* Slightly smaller than headers to fit nicely */
+
+            margin-bottom: 6px;
+
+        }
+
+
+
+        /* Footer */
+
+        .address {
+
+            margin-top: 30px;
+
+            font-family: 'Arial', sans-serif;
+
+            font-weight: bold;
+
+            font-size: 24px;
+
+        }
+
+
+
+    </style>
+
+</head>
+
+<body>
+
+
+
+    <div class="menu-container">
+
+        
+
+        <svg class="arched-title" viewBox="0 0 800 150" preserveAspectRatio="xMidYMid meet">
+
+            <path id="curve" d="M20,150 Q400,20 780,150" fill="transparent" stroke="none"/>
+
+            <text>
+
+                <textPath href="#curve" startOffset="50%" text-anchor="middle" dominant-baseline="middle">
+
+                    TAKEOUT CREATIVE
+
+                </textPath>
+
+            </text>
+
+        </svg>
+
+
+
+        <div class="sub-header">Kansas City, MO</div>
+
+        
+
+        <div class="chinese-main-title">龍 咁 威</div>
+
+
+
+        <div class="middle-section">
+
+            <div class="side-text">恭喜發財</div>
+
+            
+
+            <img src="takeoutlogo2.png" alt="Takeout Creative Logo" class="dragon-image">
+
+
+
+            <div class="side-text">祝您好運</div>
+
+        </div>
+
+
+
+        <div class="serving-banner">
+
+            Serving The Area Since 2025
+
+        </div>
+
+
+
+        <div class="carry-out"><a href="https://vimeo.com/user251299334" target="_blank">VIEW OUR WORK</a></div>
+
+
+
+        <div class="specials-header">-- TODAY'S SPECIALS --</div>
+
+
+
+        <ul class="services-list">
+
+            <li class="service-item">Video Editing</li>
+
+            <li class="service-item">Sound Design</li>
+
+            <li class="service-item">Creative Direction</li>
+
+            <li class="service-item">Film & Music Production</li>
+
+        </ul>
+
+
+
+    </div>
+
+
+
+</body>
+
+</html>
