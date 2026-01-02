@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/jpeg" href="takeoutfav.jpg">
-    <title>Post-Production — TAKEOUT CREATIVE</title>
+    <title>Menu — TAKEOUT CREATIVE</title>
     <style>
         * {
             margin: 0;
@@ -89,44 +89,58 @@
             }
         }
 
-        .menu-detail {
-            max-width: 800px;
+        .menu {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 96px 120px;
         }
 
-        .menu-detail h1 {
-            font-size: 48px;
+        .menu-item {
+            text-decoration: none;
+            color: #111;
+            transition: opacity 0.3s;
+            display: block;
+        }
+
+        .menu-item:hover {
+            opacity: 0.6;
+        }
+
+        .menu-item h2 {
+            font-size: 24px;
             font-weight: 400;
-            letter-spacing: 4px;
+            letter-spacing: 3px;
             text-transform: uppercase;
-            margin-bottom: 24px;
-            line-height: 1.2;
+            margin-bottom: 16px;
+            line-height: 1.4;
         }
 
-        .menu-detail .description {
-            font-size: 20px;
-            margin-bottom: 48px;
+        .menu-item .description {
+            font-size: 16px;
+            margin-bottom: 24px;
             line-height: 1.6;
         }
 
-        .menu-detail ul {
+        .menu-item ul {
             list-style: none;
-            font-size: 16px;
-            line-height: 2.5;
+            font-size: 14px;
+            line-height: 2;
         }
 
-        .menu-detail ul li:before {
+        .menu-item ul li:before {
             content: "— ";
             margin-right: 8px;
         }
 
         @media (max-width: 768px) {
-            .menu-detail h1 {
-                font-size: 32px;
-                letter-spacing: 2px;
+            .menu {
+                grid-template-columns: 1fr;
+                gap: 64px;
             }
 
-            .menu-detail .description {
-                font-size: 18px;
+            .menu-item h2 {
+                font-size: 20px;
+                letter-spacing: 2px;
             }
         }
 
@@ -155,17 +169,47 @@
             </nav>
         </header>
 
-        <section class="menu-detail">
-            <h1>POST-PRODUCTION (AVAILABLE INDEPENDENTLY)</h1>
-            <p class="description">Picture and sound finishing for teams who've already shot.</p>
-            <ul>
-                <li>Picture Editing</li>
-                <li>Sound Design</li>
-                <li>Dialogue Cleanup</li>
-                <li>Music Editing</li>
-                <li>Audio Mixing & Mastering</li>
-                <li>Final Delivery & Formatting</li>
-            </ul>
+        <section class="menu">
+            <a href="narrative.html" class="menu-item">
+                <h2>NARRATIVE & CINEMATIC FILM</h2>
+                <p class="description">Original stories, directed and finished end-to-end.</p>
+                <ul>
+                    <li>Writing & Story Development</li>
+                    <li>Directing</li>
+                    <li>Cinematography</li>
+                    <li>Picture Editing</li>
+                    <li>Sound Design</li>
+                    <li>Audio Mixing & Mastering</li>
+                    <li>Cinematic Final Delivery</li>
+                </ul>
+            </a>
+
+            <a href="brand.html" class="menu-item">
+                <h2>BRAND & COMMERCIAL VIDEO</h2>
+                <p class="description">Fashion/luxury video for social, web, and campaigns.</p>
+                <ul>
+                    <li>Creative Concepting</li>
+                    <li>Art Direction & Direction</li>
+                    <li>Cinematography</li>
+                    <li>Editorial Video Editing</li>
+                    <li>Sound Design</li>
+                    <li>Audio Mixing & Mastering</li>
+                    <li>Social & Web Deliverables</li>
+                </ul>
+            </a>
+
+            <a href="post-production.html" class="menu-item">
+                <h2>POST-PRODUCTION (AVAILABLE INDEPENDENTLY)</h2>
+                <p class="description">Picture and sound finishing for teams who've already shot.</p>
+                <ul>
+                    <li>Picture Editing</li>
+                    <li>Sound Design</li>
+                    <li>Dialogue Cleanup</li>
+                    <li>Music Editing</li>
+                    <li>Audio Mixing & Mastering</li>
+                    <li>Final Delivery & Formatting</li>
+                </ul>
+            </a>
         </section>
 
         <footer>
