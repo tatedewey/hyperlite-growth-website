@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/jpeg" href="takeoutfav.jpg">
+    <title>Work — TAKEOUT CREATIVE</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, 'Inter', sans-serif;
+            background-color: #f7f5ef;
+            color: #111;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 96px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 32px;
+            }
+        }
+
+        header {
+            padding: 48px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 18px;
+            letter-spacing: 2px;
+            text-decoration: none;
+            color: #111;
+        }
+
+        nav {
+            display: flex;
+            gap: 48px;
+        }
+
+        nav a {
+            font-size: 14px;
+            letter-spacing: 1.5px;
+            text-decoration: none;
+            color: #111;
+            text-transform: uppercase;
+            transition: opacity 0.3s;
+        }
+
+        nav a:hover {
+            opacity: 0.6;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 32px 0;
+            }
+
+            nav {
+                gap: 24px;
+            }
+
+            nav a {
+                font-size: 12px;
+            }
+        }
+
+        section {
+            padding: 96px 0;
+        }
+
+        @media (max-width: 768px) {
+            section {
+                padding: 64px 0;
+            }
+        }
+
+        .work-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 48px;
+            margin-bottom: 96px;
+        }
+
+        .work-item {
+            text-decoration: none;
+            color: #111;
+            transition: opacity 0.3s;
+        }
+
+        .work-item:hover {
+            opacity: 0.6;
+        }
+
+        .work-item .title {
+            font-size: 18px;
+            font-weight: 400;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+        }
+
+        .work-item .category {
+            font-size: 12px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            opacity: 0.6;
+            margin-bottom: 4px;
+        }
+
+        .work-item .year {
+            font-size: 12px;
+            opacity: 0.5;
+        }
+
+        .case-detail {
+            margin-top: 96px;
+            padding-top: 96px;
+            border-top: 1px solid rgba(17, 17, 17, 0.1);
+            max-width: 800px;
+        }
+
+        .case-detail p {
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 32px;
+        }
+
+        .case-detail .roles {
+            font-size: 14px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+            opacity: 0.7;
+        }
+
+        .case-detail .deliverables {
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        @media (max-width: 768px) {
+            .work-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 32px;
+            }
+
+            .work-grid.work-grid-single {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        footer {
+            padding: 48px 0;
+            font-size: 12px;
+            letter-spacing: 1px;
+            opacity: 0.5;
+        }
+
+        @media (max-width: 768px) {
+            footer {
+                padding: 32px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="index.html" class="logo">创意服务</a>
+            <nav>
+                <a href="work.html">Work</a>
+                <a href="menu.html">Menu</a>
+                <a href="index.html#about">About</a>
+            </nav>
+        </header>
+
+        <section>
+            <div class="work-grid">
+                <!-- Placeholder projects - replace with real projects -->
+                <a href="#project-1" class="work-item">
+                    <div class="title">Project Title One</div>
+                    <div class="category">Brand Film</div>
+                    <div class="year">2024</div>
+                </a>
+                <a href="#project-2" class="work-item">
+                    <div class="title">Project Title Two</div>
+                    <div class="category">Campaign</div>
+                    <div class="year">2024</div>
+                </a>
+                <a href="#project-3" class="work-item">
+                    <div class="title">Project Title Three</div>
+                    <div class="category">Narrative</div>
+                    <div class="year">2024</div>
+                </a>
+                <a href="#project-4" class="work-item">
+                    <div class="title">Project Title Four</div>
+                    <div class="category">Short</div>
+                    <div class="year">2023</div>
+                </a>
+                <a href="#project-5" class="work-item">
+                    <div class="title">Project Title Five</div>
+                    <div class="category">Brand Film</div>
+                    <div class="year">2023</div>
+                </a>
+                <a href="#project-6" class="work-item">
+                    <div class="title">Project Title Six</div>
+                    <div class="category">Campaign</div>
+                    <div class="year">2023</div>
+                </a>
+            </div>
+
+            <!-- Case detail blocks - add more as needed -->
+            <div id="project-1" class="case-detail">
+                <p>Short description of the project, creative approach, and outcome. Replace this placeholder text with actual project details.</p>
+                <div class="roles">Roles: Directing, Cinematography, Editing</div>
+                <div class="deliverables">Deliverables: Final film, social cuts, behind-the-scenes</div>
+            </div>
+
+            <div id="project-2" class="case-detail">
+                <p>Short description of the project, creative approach, and outcome. Replace this placeholder text with actual project details.</p>
+                <div class="roles">Roles: Creative Direction, Art Direction, Post-Production</div>
+                <div class="deliverables">Deliverables: Campaign video, social assets, web version</div>
+            </div>
+
+            <!-- Add more case detail blocks for other projects -->
+        </section>
+
+        <footer>
+            © TAKEOUTCREATIVE
+        </footer>
+    </div>
+</body>
+</html>
+
