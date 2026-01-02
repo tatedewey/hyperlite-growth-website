@@ -6,54 +6,459 @@
     <link rel="icon" type="image/jpeg" href="takeoutfav.jpg">
     <title>TAKEOUT CREATIVE</title>
     <style>
-        body {
+        * {
             margin: 0;
-            padding: 40px 20px;
-            text-align: center;
-            font-family: Arial, sans-serif;
-            background-color: #FFFEF7;
+            padding: 0;
+            box-sizing: border-box;
         }
-        
-        video {
-            max-width: 300px;
-            width: 100%;
-            height: auto;
-            display: block;
-            margin: 0 auto 30px;
-            -webkit-user-select: none;
-            user-select: none;
+
+        html {
+            scroll-behavior: smooth;
         }
-        
-        h1 {
-            color: black;
-            font-size: 36px;
-            margin: 0 0 15px 0;
-            font-weight: normal;
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, 'Inter', sans-serif;
+            background-color: #f7f5ef;
+            color: #111;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
         }
-        
-        .subheading {
-            color: black;
-            font-size: 20px;
-            margin: 0 0 30px 0;
-            font-weight: normal;
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 96px;
         }
-        
-        a {
-            color: black;
-            text-decoration: underline;
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 32px;
+            }
+        }
+
+        /* Header */
+        header {
+            padding: 48px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
             font-size: 18px;
+            letter-spacing: 2px;
+            text-decoration: none;
+            color: #111;
         }
-        
-        a:hover {
-            color: #333;
+
+        nav {
+            display: flex;
+            gap: 48px;
+        }
+
+        nav a {
+            font-size: 14px;
+            letter-spacing: 1.5px;
+            text-decoration: none;
+            color: #111;
+            text-transform: uppercase;
+            transition: opacity 0.3s;
+        }
+
+        nav a:hover {
+            opacity: 0.6;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 32px 0;
+            }
+
+            nav {
+                gap: 24px;
+            }
+
+            nav a {
+                font-size: 12px;
+            }
+        }
+
+        /* Hero */
+        .hero {
+            min-height: 65vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 96px 0;
+        }
+
+        .hero h1 {
+            font-size: 72px;
+            font-weight: 400;
+            letter-spacing: 8px;
+            margin-bottom: 32px;
+            line-height: 1.1;
+        }
+
+        .hero .positioning {
+            font-size: 20px;
+            font-weight: 300;
+            margin-bottom: 16px;
+            max-width: 600px;
+        }
+
+        .hero .meta {
+            font-size: 14px;
+            letter-spacing: 2px;
+            margin-bottom: 48px;
+            opacity: 0.7;
+        }
+
+        .hero .cta {
+            font-size: 14px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: #111;
+            border-bottom: 1px solid #111;
+            padding-bottom: 4px;
+            transition: opacity 0.3s;
+        }
+
+        .hero .cta:hover {
+            opacity: 0.6;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                min-height: 50vh;
+                padding: 64px 0;
+            }
+
+            .hero h1 {
+                font-size: 48px;
+                letter-spacing: 4px;
+                margin-bottom: 24px;
+            }
+
+            .hero .positioning {
+                font-size: 18px;
+            }
+
+            .hero .meta {
+                font-size: 12px;
+            }
+        }
+
+        /* Section spacing */
+        section {
+            padding: 96px 0;
+        }
+
+        @media (max-width: 768px) {
+            section {
+                padding: 64px 0;
+            }
+        }
+
+        /* Menu Section */
+        .menu {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 96px 120px;
+        }
+
+        .menu-item h2 {
+            font-size: 24px;
+            font-weight: 400;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+            line-height: 1.4;
+        }
+
+        .menu-item .description {
+            font-size: 16px;
+            margin-bottom: 24px;
+            line-height: 1.6;
+        }
+
+        .menu-item ul {
+            list-style: none;
+            font-size: 14px;
+            line-height: 2;
+        }
+
+        .menu-item ul li:before {
+            content: "— ";
+            margin-right: 8px;
+        }
+
+        @media (max-width: 768px) {
+            .menu {
+                grid-template-columns: 1fr;
+                gap: 64px;
+            }
+
+            .menu-item h2 {
+                font-size: 20px;
+                letter-spacing: 2px;
+            }
+        }
+
+        /* Work Section */
+        .work-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 48px;
+            margin-bottom: 96px;
+        }
+
+        .work-item {
+            text-decoration: none;
+            color: #111;
+            transition: opacity 0.3s;
+        }
+
+        .work-item:hover {
+            opacity: 0.6;
+        }
+
+        .work-item .title {
+            font-size: 18px;
+            font-weight: 400;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+        }
+
+        .work-item .category {
+            font-size: 12px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            opacity: 0.6;
+            margin-bottom: 4px;
+        }
+
+        .work-item .year {
+            font-size: 12px;
+            opacity: 0.5;
+        }
+
+        .case-detail {
+            margin-top: 96px;
+            padding-top: 96px;
+            border-top: 1px solid rgba(17, 17, 17, 0.1);
+            max-width: 800px;
+        }
+
+        .case-detail p {
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 32px;
+        }
+
+        .case-detail .roles {
+            font-size: 14px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+            opacity: 0.7;
+        }
+
+        .case-detail .deliverables {
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        @media (max-width: 768px) {
+            .work-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 32px;
+            }
+
+            .work-grid.work-grid-single {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* About Section */
+        .about {
+            max-width: 700px;
+        }
+
+        .about p {
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 32px;
+        }
+
+        .about .contact {
+            margin-top: 48px;
+        }
+
+        .about .contact a {
+            font-size: 14px;
+            color: #111;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 12px;
+            letter-spacing: 1px;
+            transition: opacity 0.3s;
+        }
+
+        .about .contact a:hover {
+            opacity: 0.6;
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            padding: 48px 0;
+            font-size: 12px;
+            letter-spacing: 1px;
+            opacity: 0.5;
+        }
+
+        @media (max-width: 768px) {
+            footer {
+                padding: 32px 0;
+            }
         }
     </style>
 </head>
 <body>
-    <video src="./gifvid.mp4" autoplay loop muted playsinline></video>
-    <h1>TAKEOUT CREATIVE</h1>
-    <div class="subheading">创意服务 | KCMO</div>
-    <a href="https://vimeo.com/user251299334">View Menu</a>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <a href="#" class="logo">创意服务</a>
+            <nav>
+                <a href="#work">Work</a>
+                <a href="#menu">Menu</a>
+                <a href="#about">About</a>
+            </nav>
+        </header>
+
+        <!-- Hero -->
+        <section class="hero">
+            <h1>TAKEOUT CREATIVE</h1>
+            <p class="positioning">Cinematic storytelling for brands and original narrative.</p>
+            <p class="meta">创意服务 | KCMO</p>
+            <a href="#menu" class="cta">View Menu</a>
+        </section>
+
+        <!-- Menu Section -->
+        <section id="menu" class="menu">
+            <div class="menu-item">
+                <h2>NARRATIVE & CINEMATIC FILM</h2>
+                <p class="description">Original stories, directed and finished end-to-end.</p>
+                <ul>
+                    <li>Writing & Story Development</li>
+                    <li>Directing</li>
+                    <li>Cinematography</li>
+                    <li>Picture Editing</li>
+                    <li>Sound Design</li>
+                    <li>Audio Mixing & Mastering</li>
+                    <li>Cinematic Final Delivery</li>
+                </ul>
+            </div>
+
+            <div class="menu-item">
+                <h2>BRAND & COMMERCIAL VIDEO</h2>
+                <p class="description">Fashion/luxury video for social, web, and campaigns.</p>
+                <ul>
+                    <li>Creative Concepting</li>
+                    <li>Art Direction & Direction</li>
+                    <li>Cinematography</li>
+                    <li>Editorial Video Editing</li>
+                    <li>Sound Design</li>
+                    <li>Audio Mixing & Mastering</li>
+                    <li>Social & Web Deliverables</li>
+                </ul>
+            </div>
+
+            <div class="menu-item">
+                <h2>POST-PRODUCTION (AVAILABLE INDEPENDENTLY)</h2>
+                <p class="description">Picture and sound finishing for teams who've already shot.</p>
+                <ul>
+                    <li>Picture Editing</li>
+                    <li>Sound Design</li>
+                    <li>Dialogue Cleanup</li>
+                    <li>Music Editing</li>
+                    <li>Audio Mixing & Mastering</li>
+                    <li>Final Delivery & Formatting</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Work Section -->
+        <section id="work">
+            <div class="work-grid">
+                <!-- Placeholder projects - replace with real projects -->
+                <a href="#project-1" class="work-item">
+                    <div class="title">Project Title One</div>
+                    <div class="category">Brand Film</div>
+                    <div class="year">2024</div>
+                </a>
+                <a href="#project-2" class="work-item">
+                    <div class="title">Project Title Two</div>
+                    <div class="category">Campaign</div>
+                    <div class="year">2024</div>
+                </a>
+                <a href="#project-3" class="work-item">
+                    <div class="title">Project Title Three</div>
+                    <div class="category">Narrative</div>
+                    <div class="year">2024</div>
+                </a>
+                <a href="#project-4" class="work-item">
+                    <div class="title">Project Title Four</div>
+                    <div class="category">Short</div>
+                    <div class="year">2023</div>
+                </a>
+                <a href="#project-5" class="work-item">
+                    <div class="title">Project Title Five</div>
+                    <div class="category">Brand Film</div>
+                    <div class="year">2023</div>
+                </a>
+                <a href="#project-6" class="work-item">
+                    <div class="title">Project Title Six</div>
+                    <div class="category">Campaign</div>
+                    <div class="year">2023</div>
+                </a>
+            </div>
+
+            <!-- Case detail blocks - add more as needed -->
+            <div id="project-1" class="case-detail">
+                <p>Short description of the project, creative approach, and outcome. Replace this placeholder text with actual project details.</p>
+                <div class="roles">Roles: Directing, Cinematography, Editing</div>
+                <div class="deliverables">Deliverables: Final film, social cuts, behind-the-scenes</div>
+            </div>
+
+            <div id="project-2" class="case-detail">
+                <p>Short description of the project, creative approach, and outcome. Replace this placeholder text with actual project details.</p>
+                <div class="roles">Roles: Creative Direction, Art Direction, Post-Production</div>
+                <div class="deliverables">Deliverables: Campaign video, social assets, web version</div>
+            </div>
+
+            <!-- Add more case detail blocks for other projects -->
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <p>TAKEOUT CREATIVE is a creative partnership specializing in narrative film, fashion and luxury brand video, and sound-forward post-production. We craft cinematic storytelling for brands and original narrative work, delivering end-to-end production from concept to final delivery.</p>
+            
+            <div class="contact">
+                <a href="mailto:hello@takeoutcreative.art">hello@takeoutcreative.art</a>
+                <a href="https://instagram.com/takeoutcreative.art" target="_blank">@takeoutcreative.art</a>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            © TAKEOUTCREATIVE
+        </footer>
+    </div>
 </body>
 </html>
-<!-- Updated 1767036684 -->
